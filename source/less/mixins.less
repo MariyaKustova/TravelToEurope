@@ -1,0 +1,54 @@
+// Параметры текста
+
+.font (@size; @line-height) {
+  font-size: @size;
+  line-height: @line-height;
+}
+
+.medium () {
+  font-family: "Montserrat-Medium", "Arial", sans-serif;
+}
+
+.semibold () {
+  font-family: "Montserrat-Semibold", "Arial", sans-serif;
+}
+
+.bold () {
+  font-family: "Montserrat-Bold", "Arial", sans-serif;
+}
+
+.list-reset () {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.indent (@margin; @padding) {
+  margin: @margin;
+  padding: @padding;
+}
+
+.link-reset (@color) {
+  text-decoration: none;
+  color: @color;
+}
+
+.display-block-link () {
+  display: block;
+  width: auto;
+}
+
+.size (@widht; @height) {
+  width: @widht;
+  height: @height;
+}
+
+.page-title () {
+  .font(27px; 30px);
+  color: @color-black;
+}
+
+.section-header () {
+  .font(25px; 30px);
+  color: @color-black;
+}

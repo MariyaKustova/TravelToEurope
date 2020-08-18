@@ -1,0 +1,127 @@
+.review {
+  width: 382px;
+  padding: 30px 35px 26px 30px;
+  box-sizing: border-box;
+  background-color: @color-white;
+  position: absolute;
+  top: 113px;
+  right: -270px;
+}
+
+.review__title {
+  .medium ();
+  font-size: 30px;
+  line-height: 37px;
+  letter-spacing: -0.691667px;
+  margin-top: 0;
+  margin-bottom: 22px;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 68px;
+    height: 1px;
+    background-color: @color-accent;
+    margin-top: 11px;
+  }
+}
+
+.review__text {
+  font-size: 14px;
+  line-height: 28px;
+  color: @color-dark-opacity-two;
+  letter-spacing: -0.408333px;
+  margin-bottom: 30px;
+}
+
+.review__container {
+  display: flex;
+}
+
+.review__img {
+  .size (38px; 38px);
+}
+
+.review__text-name {
+  .medium ();
+  letter-spacing: -1.1px;
+  margin-top: 13px;
+  margin-bottom: 0;
+  margin-left: 16px;
+}
+
+@media (min-width: @tablet-width) and (max-width: @extremum-desktop-width) {
+  .review {
+    top: auto;
+    bottom: -28px;
+    right: 50%;
+    transform: translate(50%);
+  }
+}
+
+@media (min-width: @mobile-width) and (max-width: @extremum-tablet-width) {
+  .review {
+    width: 268px;
+    padding: 31px 20px 30px;
+    top: auto;
+    right: 50%;
+    bottom: -34px;
+    transform: translate(50%);
+  }
+
+  .review__title {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+
+    &::after {
+      margin: 11px auto 0;
+    }
+  }
+
+  .review__text {
+    text-align: center;
+    margin-bottom: 18px;
+  }
+
+  .review__container {
+    justify-content: center;
+  }
+
+  .review__text-name {
+    display: none;
+  }
+}
+
+@media (min-width: 0px) and (max-width: @mobile-width) {
+  .review {
+    width: 268px;
+    padding: 31px 20px 30px;
+    top: 49px;
+    right: 50%;
+    transform: translate(50%);
+  }
+
+  .review__title {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+
+    &::after {
+      margin: 11px auto 0;
+    }
+  }
+
+  .review__text {
+    text-align: center;
+    margin-bottom: 18px;
+  }
+
+  .review__container {
+    justify-content: center;
+  }
+
+  .review__text-name {
+    display: none;
+  }
+}

@@ -1,0 +1,70 @@
+.button-orange {
+  background-color: @color-accent;
+  display: flex;
+  align-items: center;
+  min-height: 75px;
+  border: none;
+  color: @color-white;
+
+  &:hover {
+    background-color: @color-accent-hover;
+  }
+
+  &:active {
+    background-color: @color-accent-active;
+    border-color: @color-accent-active;
+  }
+
+  span {
+  .bold ();
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: @color-white;
+  }
+}
+
+@media (min-width: @tablet-width) and (max-width: @extremum-desktop-width) {
+  .button-orange {
+    width: 250px;
+    min-height: 50px;
+    box-sizing: border-box;
+
+    span {
+      .medium ();
+      font-size: 10px;
+      line-height: 12px;
+      }
+  }
+}
+
+@media (min-width: @mobile-width) and (max-width: @extremum-tablet-width) {
+  .button-orange {
+    width: 288px;
+    min-height: 50px;
+    box-sizing: border-box;
+
+    span {
+      .medium ();
+      font-size: 10px;
+      line-height: 12px;
+      letter-spacing: 2px;
+      }
+  }
+}
+
+@media (min-width: 0px) and (max-width: @mobile-width) {
+  .button-orange {
+    width: 288px;
+    min-height: 50px;
+    box-sizing: border-box;
+
+    span {
+      .medium ();
+      font-size: 10px;
+      line-height: 12px;
+      letter-spacing: 2px;
+      }
+  }
+}

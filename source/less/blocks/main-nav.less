@@ -1,0 +1,277 @@
+.main-nav {
+  margin-left: auto;
+}
+
+.main-nav__toggle-open,
+.main-nav__toggle-close {
+  display: none;
+}
+
+@media (min-width: @tablet-width) and (max-width: @extremum-desktop-width) {
+  .main-nav {
+    margin-left: 0;
+    position: relative;
+    top: -50px;
+  }
+
+  .main-nav__toggle-open {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .size (72px; 50px);
+    background-color: @color-accent;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    &:hover {
+      background-color: @color-accent-hover;
+    }
+
+    &:active {
+      background-color: @color-accent-active;
+      border-color: @color-accent-active;
+    }
+  }
+
+  .main-nav__svg-close {
+    stroke: @color-most-dark;
+  }
+
+  .main-nav__toggle-close {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    .size (50px; 50px);
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+
+    &:hover .main-nav__svg-close {
+      .size (27px; 27px);
+    }
+
+    &:active .main-nav__svg-close {
+      opacity: 0.5;
+    }
+  }
+
+  .no-js {
+    .main-nav {
+      position: relative;
+    }
+
+    .main-nav__toggle-open,
+    .main-nav__toggle-close {
+      display: none;
+    }
+
+    .site-list {
+      display: flex;
+    }
+  }
+
+  .main-nav--open {
+    .main-nav__toggle-open {
+      display: none;
+    }
+
+    .main-nav__toggle-close {
+      display: block;
+    }
+
+    .site-list {
+      display: block;
+    }
+  }
+
+  .main-nav--opened {
+    position: absolute;
+    top: 0;
+
+    .main-nav__toggle-open {
+      display: none;
+    }
+
+    .main-nav__toggle-close {
+      display: flex;
+    }
+
+    .site-list {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: @mobile-width) and (max-width: @extremum-tablet-width) {
+  .main-nav {
+    margin-left: 0;
+  }
+
+  .main-nav__toggle-open {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .size (50px; 50px);
+    background-color: @color-accent;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    &:hover {
+      background-color: @color-accent-hover;
+    }
+
+    &:active {
+      background-color: @color-accent-active;
+      border-color: @color-accent-active;
+    }
+  }
+
+  .main-nav__svg-close {
+    stroke: @color-most-dark;
+  }
+
+  .main-nav__toggle-close {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    .size (50px; 50px);
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+
+    &:hover .main-nav__svg-close {
+      .size (27px; 27px);
+    }
+
+    &:active .main-nav__svg-close {
+      opacity: 0.5;
+    }
+  }
+
+  .no-js {
+    .main-nav {
+      position: relative;
+    }
+
+    .main-nav__toggle-open,
+    .main-nav__toggle-close {
+      display: none;
+    }
+
+    .site-list {
+      display: block;
+    }
+  }
+
+  .main-nav--open {
+    width: 100%;
+    position: absolute;
+    top: 0;
+
+    .main-nav__toggle-open {
+      display: none;
+    }
+
+    .main-nav__toggle-close {
+      display: flex;
+    }
+
+    .site-list {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: 0px) and (max-width: @mobile-width) {
+  .main-nav {
+    margin-left: 0;
+  }
+
+  .main-nav__toggle-open {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .size (50px; 50px);
+    background-color: @color-accent;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    &:hover {
+      background-color: @color-accent-hover;
+    }
+
+    &:active {
+      background-color: @color-accent-active;
+      border-color: @color-accent-active;
+    }
+  }
+
+  .main-nav__svg-close {
+    stroke: @color-most-dark;
+  }
+
+  .main-nav__toggle-close {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    .size (50px; 50px);
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+
+    &:hover .main-nav__svg-close {
+      .size (27px; 27px);
+    }
+
+    &:active .main-nav__svg-close {
+      opacity: 0.5;
+    }
+  }
+
+  .no-js {
+    .main-nav {
+      position: relative;
+    }
+
+    .main-nav__toggle-open,
+    .main-nav__toggle-close {
+      display: none;
+    }
+
+    .site-list {
+      display: block;
+    }
+  }
+
+  .main-nav--opened {
+    position: absolute;
+    top: 0;
+
+    .main-nav__toggle-open {
+      display: none;
+    }
+
+    .main-nav__toggle-close {
+      display: flex;
+    }
+
+    .site-list {
+      display: block;
+    }
+  }
+}

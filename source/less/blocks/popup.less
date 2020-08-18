@@ -1,0 +1,85 @@
+.popup {
+  width: 728px;
+  box-sizing: border-box;
+  background-color: #FBF8F8;
+  display: none;
+  margin: 0 auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%; -50%);
+}
+
+.popup--open {
+  display: flex;
+}
+
+.popup__button-close {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  display: block;
+  .size (33px; 33px);
+  top: 12px;
+  right: 20px;
+
+  &:hover .popup__svg {
+    .size (27px; 27px);
+  }
+
+  &:active .popup__svg {
+    opacity: 0.5;
+  }
+}
+
+.popup__svg {
+  position: relative;
+  left: -3px;
+  top: 2px;
+  fill: @color-most-dark;
+  stroke: @color-most-dark;
+}
+
+.popup__img {
+  display: block;
+  width: 338px;
+  height: auto;
+}
+
+.popup__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 61px 61px 61px;
+}
+
+.popup__title {
+  .semibold ();
+  font-size: 25px;
+  line-height: 43px;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.popup__form .form__number-phone {
+  margin-right: 0;
+}
+
+.popup__form {
+
+  input {
+    margin-bottom: 20px;
+}
+
+  .form__button {
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .form__svg {
+    top: -5px;
+  }
+}
