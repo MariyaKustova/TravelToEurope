@@ -95,8 +95,11 @@
   .bold ();
   color: @color-dark-opacity-two;
   margin-top: 0;
-  margin-left: auto;
   margin-bottom: 23px;
+}
+
+.price__number {
+  margin-left: auto;
 }
 
 .price__heading {
@@ -182,7 +185,7 @@
 
   .price__wrapper {
     width: 100%;
-    margin: 0 auto 30px;
+    margin: 0 auto 26px;
     padding: 0;
   }
 
@@ -193,7 +196,7 @@
     margin-top: 0;
     margin-bottom: 20px;
 
-    &:after {
+    &::after {
       display: none;
     }
   }
@@ -226,6 +229,8 @@
   }
 
   .price__list {
+    width: 100%;
+    box-sizing: border-box;
     order: 2;
     margin-right: -50px;
     padding: 0 70px;
@@ -234,13 +239,13 @@
   .price__item {
     width: calc(50% - 25px);
     padding: 30px 16px 0;
-    margin-right: 50px;
   }
 
   .price__item:first-child {
     padding: 28px 16px 0;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
+    margin-right: 50px;
   }
 
 
@@ -298,8 +303,8 @@
   }
 
   .price__button {
-    margin-left: -19px;
-    width: calc(100% + 38px);
+    margin-left: -17px;
+    width: calc(100% + 34px);
     position: relative;
     bottom: -1px;
   }
@@ -324,7 +329,7 @@
     margin-top: 0;
     margin-bottom: 20px;
 
-    &:after {
+    &::after {
       display: none;
     }
   }
@@ -366,7 +371,7 @@
   .price__item {
     width: 100%;
     padding: 30px 18px 0;
-    margin-bottom: 21px;
+    margin-bottom: 27px;
   }
 
   .price__item:first-child {
@@ -413,7 +418,7 @@
   }
 
   .price__list-advantages {
-    margin-bottom: 20px;
+    margin-bottom: 14px;
   }
 
   .price__list-advantages::before {
@@ -437,7 +442,7 @@
   }
 }
 
-@media (min-width: 0px) and (max-width: @mobile-width) {
+@media (min-width: 0) and (max-width: @mobile-width) {
   .price {
     flex-direction: column;
     margin-bottom: 25px;
@@ -456,7 +461,7 @@
     margin-top: 0;
     margin-bottom: 20px;
 
-    &:after {
+    &::after {
       display: none;
     }
   }
@@ -498,7 +503,7 @@
   .price__item {
     width: 100%;
     padding: 30px 18px 0;
-    margin-bottom: 21px;
+    margin-bottom: 27px;
   }
 
   .price__item:first-child {
@@ -545,7 +550,7 @@
   }
 
   .price__list-advantages {
-    margin-bottom: 20px;
+    margin-bottom: 14px;
   }
 
   .price__list-advantages::before {

@@ -98,6 +98,7 @@
           <ul class="places-to-visit__list">
             <li class="places-to-visit__item">
               <a class="places-to-visit__link" href="#Greece">
+                <label for="slide-greece">
                 <picture>
                   <source type="image/webp" media="(min-width: 1920px)" srcset="
                       ./img/webp/index/greece-desktop@1x.webp 1x,
@@ -117,9 +118,11 @@
                 <p class="places-to-visit__country">Греция</p>
                 <p class="places-to-visit__details">смотреть подробнее</p>
               </a>
+            </label>
             </li>
             <li class="places-to-visit__item">
               <a class="places-to-visit__link" href="#Albania">
+                <label for="slide-albania">
                 <picture>
                   <source type="image/webp" media="(min-width: 1920px)" srcset="
                       ./img/webp/index/albania-desktop@1x.webp 1x,
@@ -138,10 +141,12 @@
                 </picture>
                 <p class="places-to-visit__country">Албания</p>
                 <p class="places-to-visit__details">смотреть подробнее</p>
+                </label>
               </a>
             </li>
             <li class="places-to-visit__item">
               <a class="places-to-visit__link" href="#Macedonia">
+                <label for="slide-macedonia">
                 <picture>
                   <source type="image/webp" media="(min-width: 1920px)" srcset="
                       ./img/webp/index/macedonia-desktop@1x.webp 1x,
@@ -160,10 +165,12 @@
                 </picture>
                 <p class="places-to-visit__country">Македония</p>
                 <p class="places-to-visit__details">смотреть подробнее</p>
+                </label>
               </a>
             </li>
             <li class="places-to-visit__item">
               <a class="places-to-visit__link" href="#Montenegro">
+                <label for="slide-montenegro">
                 <picture>
                   <source type="image/webp" media="(min-width: 1920px)" srcset="
                       ./img/webp/index/montenegro-desktop@1x.webp 1x,
@@ -183,9 +190,11 @@
                 <p class="places-to-visit__country">Черногория</p>
                 <p class="places-to-visit__details">смотреть подробнее</p>
               </a>
+            </label>
             </li>
             <li class="places-to-visit__item">
               <a class="places-to-visit__link" href="#Croatia">
+                <label for="slide-croatia">
                 <picture>
                   <source type="image/webp" media="(min-width: 1920px)" srcset="
                       ./img/webp/index/croatia-desktop@1x.webp 1x,
@@ -204,6 +213,7 @@
                 </picture>
                 <p class="places-to-visit__country">Хорватия</p>
                 <p class="places-to-visit__details">смотреть подробнее</p>
+              </label>
               </a>
             </li>
           </ul>
@@ -214,19 +224,19 @@
         <div class="page-main__slider slider">
           <ul class="slider__list">
             <li class="slider__item">
-              <label for="slide-greece">Греция</label>
+              <label class="slider__label slider__label--active" for="slide-greece">Греция</label>
             </li>
             <li class="slider__item">
-              <label for="slide-albania">Албания</label>
+              <label class="slider__label" for="slide-albania">Албания</label>
             </li>
             <li class="slider__item">
-              <label for="slide-macedonia">Македония</label>
+              <label class="slider__label" for="slide-macedonia">Македония</label>
             </li>
             <li class="slider__item">
-              <label for="slide-montenegro">Черногория</label>
+              <label class="slider__label" for="slide-montenegro">Черногория</label>
             </li>
             <li class="slider__item">
-              <label for="slide-croatia">Хорватия</label>
+              <label class="slider__label" for="slide-croatia">Хорватия</label>
             </li>
           </ul>
           <ul class="slider__list-description">
@@ -638,19 +648,21 @@
         <div class="feedback__wrapper">
           <h2 class="feedback__title">У Вас остались вопросы?</h2>
           <p class="feedback__text">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
-          <form class="popup__form form" novalidate method="POST" action="https://echo.htmlacademy.ru">
-            <label class="form__number-phone">
-              <span class="form__error form__error--tel">Данные не верны</span>
+          <form class="feedback__form form" novalidate method="POST" action="https://echo.htmlacademy.ru">
+            <div class="form__wrapper">
+            <label class="form__label form__number-phone">
+              <span class="form__message-error">Данные не верны</span>
               <svg class="form__svg" width="7px" height="7px">
                 <use xlink:href="./img/sprite.svg#icon-star"></use>
               </svg>
-              <input class="form__input form__input--tel" type="text" name="phone" placeholder="+7 Введите 10 цифр номера" pattern="[0-9]{11}"
+              <input class="form__input form__input--tel" type="tel" name="phone" placeholder="+7 Введите 10 цифр номера" pattern="[0-9]{11}"
                 required />
             </label>
-            <label class="form__mail">
-              <span class="form__error form__error--mail">Данные не верны</span>
-              <input class="form__input form__input--mail" type="text" name="email" placeholder="E-mail" />
+            <label class="form__label form__mail">
+              <span class="form__message-error">Данные не верны</span>
+              <input class="form__input form__input--mail" type="email" name="email" placeholder="E-mail" />
             </label>
+          </div>
             <button class="form__button button-orange" type="submit">
               Отправить
             </button>
@@ -734,8 +746,8 @@
   </div>
 
   <section class="popup">
-    <button class="popup__button-close">
-      <svg class="popup__svg" width="22px" height="22px">
+    <button class="popup__button-close close-button">
+      <svg class="close-button__svg" width="22px" height="22px">
         <use xlink:href="./img/sprite.svg#icon-close"></use>
       </svg>
       <span class="visually-hidden">Закрыть</span>
@@ -751,17 +763,17 @@
     <div class="popup__wrapper">
       <h2 class="popup__title">Купить тур </h2>
       <form class="popup__form form" novalidate method="POST" action="https://echo.htmlacademy.ru">
-        <label class="form__number-phone">
-          <span class="form__error form__error--tel">Данные не верны</span>
+        <label class=" form__label form__number-phone">
+          <span class="form__message-error">Данные не верны</span>
           <svg class="form__svg" width="7px" height="7px">
             <use xlink:href="./img/sprite.svg#icon-star"></use>
           </svg>
-          <input class="form__input form__input--tel" type="text" name="phone" placeholder="+7 Введите 10 цифр номера" pattern="[0-9]{11}"
+          <input class="form__input form__input--tel" type="tel" name="phone" placeholder="+7 Введите 10 цифр номера" pattern="[0-9]{11}"
             required />
         </label>
-        <label class="form__mail">
-          <span class="form__error form__error--mail">Данные не верны</span>
-          <input class="form__input form__input--mail" type="text" name="email" placeholder="E-mail" />
+        <label class="form__label form__mail">
+          <span class="form__message-error">Данные не верны</span>
+          <input class="form__input form__input--mail" type="email" name="email" placeholder="E-mail" />
         </label>
         <button class="form__button button-orange" type="submit">
           Отправить
@@ -771,8 +783,8 @@
   </section>
 
   <section class="popup-success">
-    <button class="popup-success__button-close">
-      <svg class="popup-success__svg" width="22px" height="22px">
+    <button class="popup-success__button-close close-button">
+      <svg class="close-button__svg" width="22px" height="22px">
         <use xlink:href="./img/sprite.svg#icon-close"></use>
       </svg>
       <span class="visually-hidden">Закрыть</span>
@@ -785,6 +797,7 @@
     svg4everybody();
   </script>
   <script src="./js/menu.min.js"></script>
+  <script src="./js/slider.min.js"></script>
   <script src="./js/popup.min.js"></script>
   <script src="./js/form.min.js"></script>
 </body>

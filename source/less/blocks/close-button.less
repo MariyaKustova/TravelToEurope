@@ -1,0 +1,32 @@
+.close-button {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  display: block;
+  .size (33px; 33px);
+  top: 12px;
+  right: 20px;
+
+  &:hover .popup__svg {
+    .size (27px; 27px);
+  }
+
+  &:active .popup__svg {
+    opacity: 0.5;
+  }
+}
+
+.close-button__svg {
+  position: relative;
+  left: -3px;
+  top: 2px;
+  fill: @color-most-dark;
+  stroke: @color-most-dark;
+}
+
+@media (min-width: @mobile-width) and (max-width: @extremum-tablet-width) {
+  .close-button {
+    top: 12px;
+    right: 12px;
+  }
+}

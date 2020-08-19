@@ -8,28 +8,22 @@
   width: 728px;
   height: 444px;
   box-sizing: border-box;
-  background-color: #FBF8F8;
+  background-color: #fbf8f8;
   display: none;
   margin: 0 auto;
   position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &.popup--open {
+    display: flex;
+  }
 }
 
-.popup-success--open {
-  display: block;
-}
-
-.popup-success__button-close {
-  border: none;
-  background-color: transparent;
-  position: absolute;
-  display: block;
-  .size (28px; 30px);
-  top: 12px;
-  right: 20px;
-}
-
-.popup-success__svg {
-  position: relative;
-  left: -3px;
-  top: 2px;
+@media (min-width: @mobile-width) and (max-width: @extremum-tablet-width) {
+  .popup-success {
+    width: @mobile-width;
+    min-height: 568px;
+  }
 }
